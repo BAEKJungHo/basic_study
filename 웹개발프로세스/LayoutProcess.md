@@ -4,7 +4,9 @@
 
 > 웹 프로젝트 개발 프로세스 문서화 Ver 1.0
 
-## Summary. Layout Working Process
+> 2019.08.25
+
+## Layout Working Process
 
 > 메인과 서브레이아웃 작업 문서화에 대한 요약 
 

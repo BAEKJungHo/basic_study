@@ -290,3 +290,51 @@ public class ListMapConvertToJsonString {
   }
 }
 ```
+
+### DTO 객체를 JSON 형식으로 변환
+
+```java
+/**
+  * WeatherDto를 JSON 형식으로 마샬링
+  * @param dto
+  */
+public String weatherDtoToJson(Object dto){
+    try {
+        return  objectMapper.writeValueAsString(dto);
+    } catch (JsonProcessingException e) {
+        throw new RuntimeException("JSON 변환에 실패하였습니다.");
+    }
+}
+```
+
+### JSON 문자열을 JSON 파일로 생성
+
+```java
+/**
+  * JSON 형식의 문자열을 JSON파일로 출력
+  * @param data
+  * @return
+  */
+public boolean writeJsonFile(String data) {
+    File jsonFile = null;
+    BufferedOutputStream bos = null;
+    Resource resource = resouceLoader.getResource(filePath);
+    try {
+        jsonFile = resource.getFile();
+
+        FileOutputStream fos = new FileOutputStream(jsonFile);
+        bos = new BufferedOutputStream(fos,BUFFERED_BYTE_SIZE);
+        bos.write(data.getBytes());
+    } catch (IOException e) {
+        throw new RuntimeException("JSON 파일 출력 오류");
+    }finally {
+        try {
+            bos.flush();
+            bos.close();
+        } catch (IOException e) {
+            throw new RuntimeException("JSON 파일 출력 오류");
+        }
+    }
+    return true;
+}
+```

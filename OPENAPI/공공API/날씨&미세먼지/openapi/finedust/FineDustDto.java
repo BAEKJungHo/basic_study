@@ -1,5 +1,3 @@
-package net.mayeye.site.openapi.finedust;
-
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,5 +1,3 @@
-package net.mayeye.site.openapi.scheduler;
-
 import lombok.RequiredArgsConstructor;
 import net.mayeye.site.openapi.finedust.FineDustDataParser;
 import net.mayeye.site.openapi.weather.ForecastSpaceDataParser;

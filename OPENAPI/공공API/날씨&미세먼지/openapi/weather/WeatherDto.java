@@ -1,5 +1,3 @@
-package net.mayeye.site.openapi.weather;
-
 import lombok.Getter;
 import lombok.Setter;
 import net.mayeye.site.util.DateParserUtils;

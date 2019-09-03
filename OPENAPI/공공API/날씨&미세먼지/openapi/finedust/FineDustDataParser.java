@@ -1,5 +1,3 @@
-package net.mayeye.site.openapi.finedust;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import lombok.RequiredArgsConstructor;
